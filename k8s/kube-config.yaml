@@ -6,12 +6,17 @@ data:
       groups:
         - system:bootstrappers
         - system:nodes
-    - rolearn: arn:aws:iam::721233634467:role/service-role/codebuild-Webapp-project-dev-service-role
+    - rolearn: arn:aws:iam::721233634467:role/codebuild-Webapp-project-dev-service-role
       username: build
       groups:
         - system:masters
   mapUsers: |
     - userarn: arn:aws:iam::721233634467:user/om
-      username: altamash
+      username: om
       groups:
         - system:masters
+
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: kube-system        
