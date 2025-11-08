@@ -26,7 +26,7 @@ phases:
       - kubectl get ns webapp || kubectl create namespace webapp
       - kubectl apply -f k8s-aws.yaml
       - kubectl get pods -n webapp
-      - kubectl get svc - n webapp
+      - kubectl get svc -n webapp
       - echo Deployment to EKS completed.
 
    
